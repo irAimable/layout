@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.custom-btn {
+  transition: all 0.3s ease;
+}
+.custom-btn:hover {
+  transform: scale(1.05);
+}
+
+.horizontal-scroll {
+  display: inline-flex; /* Affichage en ligne des éléments */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-right: 10px; /* Espacement entre les images */
+}
+/* Dans votre fichier CSS ou SCSS */
+.horizontal-scroll-container {
+  overflow-x: auto;  /* Activation du défilement horizontal */
+  white-space: nowrap; /* Empêche le passage à la ligne du texte */
+}
+/* Dans votre fichier CSS ou SCSS */
+/* Dans votre fichier CSS ou SCSS */
+.vertical-scroll {
+  height: 400px; /* Hauteur fixe pour la zone de défilement */
+  overflow-y: auto; /* Activation du défilement vertical */
+  background-image: url('/images/vert.jpg'); /* Remplacez par le chemin de votre image */
+  background-size: cover;
+  color: #fff; /* Couleur du texte */
+  padding: 20px;
+}
+
+.text-style {
+  font-family: 'Arial', sans-serif; /* Police de caractère */
+  font-size: 18px; /* Taille de la police */
+  line-height: 1.6; /* Hauteur de ligne */
+}
+
+
+p {
+  max-width: 100%; /* Empêche le texte de s'étirer indéfiniment */
+}
+
+/* ContactForm.module.css */
+.contact-form {
+  width: 300px;
+  padding: 10px;
+  margin-left: 300px;
+  background-color: #fff;
+  background-image: url('/images/vert.jpg');
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: calc(100% - 10px);
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form input[type="submit"] {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+.logo {
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Espacement après le logo */
+}
+.contai {
+  width: 200px; /* ajustez la taille selon vos besoins */
+  height: 200px;
+  position: relative;
+}
+
+.rotate {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: spin 5s linear infinite; /* Réglages de l'animation */
+  
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); } /* Début de l'animation */
+  100% { transform: rotate(360deg); } /* Fin de l'animation */
+}
